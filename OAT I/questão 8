@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+
+        Console.Write("Digite o primeiro valor inteiro:");
+        int valor1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Digite o segundo valor inteiro:"):
+        int valor2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Digite o terceiro valor inteiro:");
+        int valor3 = Convert.ToInt32(Console.ReadLine());
+
+        List<int> valores = new List<int> { valor1, valor2, valor3 };
+
+        valores.Sort((a, b) => b.CompareTo(a));
+
+        Console.WriteLine(string.Join(", ", valores));
+    }
+}

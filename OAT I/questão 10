@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o peso (em kg):");
+        double peso = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a altura (em metros):");
+        double altura = Convert.ToDouble(Console.ReadLine());
+
+        double imc = peso / (altura * altura);
+
+        string condicao;
+
+        if (imc < 18.5)
+        {
+            condicao = "Abaixo do peso";
+        }
+        else if (imc >= 18.5 && imc < 25)
+        {
+            condicao = "Peso normal";
+        }
+        else if (imc >= 25 && imc < 30)
+        {
+            condicao = "Acima do peso";
+        }
+        else
+        {
+            condicao = "Obeso";
+        }
+        Console.WriteLine("O IMC é: {imc:F2}");
+        Console.WriteLine("Condição: {condicao}");
+    }
+}

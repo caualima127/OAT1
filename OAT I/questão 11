@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o preço do produto:");
+        double preco = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite o código da condição de pagamento (1, 2, 3 ou 4):");
+        int codigoCondicao = Convert.ToInt32(Console.ReadLine());
+
+        double valorPago = 0;
+
+        switch (codigoCondicao)
+        {
+            case 1:
+                valorPago = preco * 0.9;
+                break;
+            case 2:
+                valorPago = preco * 0.85;
+                break;
+            case 3:
+                valorPago = preco;
+                break;
+            case 4:
+                valorPago = preco * 1.1;
+                break;
+            default:
+                Console.WriteLine("Código de condição de pagamento inválido.");
+                return;
+        }
+        Console.WriteLine("O valor a ser pago é: {valorPago:C}");
+    }
+}

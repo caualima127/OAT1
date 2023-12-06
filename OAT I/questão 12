@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o número de identificação do aluno:");
+        int numeroIdentificacao = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Digite a nota 1:");
+        double nota1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a nota 2:");
+        double nota2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a nota 3:");
+        double nota3 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a média:");
+        double mediaExercicios = Convert.ToDouble(Console.ReadLine());
+
+        double media = (nota1 + nota2 * 2 + nota3 * 3 + mediaExercicios) / 7;
+
+        Console.WriteLine("Número do aluno: {numeroIdentificacao}");
+        Console.WriteLine("Média: {media:F2}");
+
+        if (media >= 40)
+        {
+            Console.WriteLine("Aprovado");
+        }
+        else
+        {
+            Console.WriteLine("Reprovado");
+        }
+    }
+}

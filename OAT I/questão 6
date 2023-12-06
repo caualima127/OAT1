@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o primeiro valor booleano (True/False):");
+        bool valor1 = Convert.ToBoolean(Console.ReadLine().ToLower());
+
+        Console.Write("Digite o segundo valor booleano (True/False): ");
+        bool valor2 = Convert.ToBoolean(Console.ReadLine().ToLower()); 
+
+        if (valor1 && valor2)
+        {
+            Console.WriteLine("Ambos os valores são VERDADEIROS.");
+        }
+        else
+        {
+            Console.WriteLine("Pelo menos um deles não é VERDADEIRO.");
+        }
+    }
+}
